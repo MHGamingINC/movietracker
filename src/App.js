@@ -1,24 +1,22 @@
 import logo from './logo.svg';
+
+// Import components
+import MovieList from './MovieList';
+
+import './moviedata.json';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  // Reads the set of data
+  const [ movieList, setMovieList ] = useState(moviedata);
+
   return (
     <div className="App">
-      <h1 className="App-banner">Movie Track</h1>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1 className="App-banner">🎥 Movie Tracker</h1>
       </header>
+      <MovieList movieList={moviedata}/>
     </div>
   );
 }

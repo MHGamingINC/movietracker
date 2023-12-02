@@ -1,0 +1,11 @@
+[{
+    "id": 1,
+    "movie": "Star Wars",
+    "watched": true
+}, {
+    "id": 2,
+    "movie": "Forest Gump",
+    "watched": false
+}
+
+]
